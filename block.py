@@ -1,9 +1,10 @@
 import hashlib
+import time as t
 class block:
-  def __init__(self,Sno,pno,time,phash,D):
+  def __init__(self,Sno,pno,time=None,phash,D):
     self.Sno = Sno
     self.pno= pno
-    self.time = time
+    self.time = time or t.time()
     self.phash = phash
     self.D = D
     self.H = self.Hfun()
